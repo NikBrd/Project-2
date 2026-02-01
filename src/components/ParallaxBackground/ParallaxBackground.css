@@ -1,0 +1,49 @@
+.parallax-background-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.parallax-background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  /* Make it tall enough to cover all scrolling - increased height */
+  height: 400vh;
+  min-height: 400vh;
+  background-image: url('/parallax-background-hb9fl02o6zsu6s1c.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  will-change: transform;
+  /* Fallback if image doesn't exist */
+  background-color: #1a1a2e;
+}
+
+/* Second background layer for additional image */
+.parallax-background-image.secondary {
+  background-image: url('/PQ3O2P.png');
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+  height: 420vh;
+  min-height: 420vh;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+

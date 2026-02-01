@@ -1,0 +1,190 @@
+.ai-recommendations-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.ai-recommendations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-title {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.recommendation-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.coin-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.coin-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.coin-info {
+  flex: 1;
+}
+
+.coin-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.coin-symbol {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.recommendation-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.recommendation-btn:hover:not(:disabled) {
+  background-color: #3d8bfe;
+}
+
+.recommendation-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.recommendation-result {
+  padding: 1rem;
+  border-radius: 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.recommendation-result.positive {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.recommendation-result.negative {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.recommendation-result.positive .recommendation-icon {
+  color: #28a745;
+}
+
+.recommendation-result.negative .recommendation-icon {
+  color: #dc3545;
+}
+
+.recommendation-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.recommendation-result.positive .recommendation-title {
+  color: #155724;
+}
+
+.recommendation-result.negative .recommendation-title {
+  color: #721c24;
+}
+
+.recommendation-explanation {
+  color: #333;
+  line-height: 1.6;
+}
+
+.no-selection-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 4rem auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.no-selection-message h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.no-selection-message p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-recommendations-container {
+    padding: 0 1rem;
+  }
+}
+
+
+
+

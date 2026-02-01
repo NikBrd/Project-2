@@ -1,0 +1,157 @@
+.about-page {
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-title {
+  text-align: center;
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.about-section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4facfe;
+  padding-bottom: 0.5rem;
+}
+
+.about-section p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  color: #666;
+  padding: 0.75rem 0;
+  padding-right: 2rem;
+  position: relative;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.features-list li::before {
+  content: '✓';
+  position: absolute;
+  right: 0;
+  color: #4facfe;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.developer-section {
+  text-align: center;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.developer-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 4px solid #4facfe;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.developer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.developer-image-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.developer-details {
+  text-align: right;
+}
+
+.developer-details h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.developer-details p {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.developer-details strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-container {
+    padding: 0 1rem;
+  }
+
+  .developer-info {
+    flex-direction: column;
+  }
+
+  .developer-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .developer-image-placeholder {
+    width: 150px;
+    height: 150px;
+    font-size: 4rem;
+  }
+}
+
+
+

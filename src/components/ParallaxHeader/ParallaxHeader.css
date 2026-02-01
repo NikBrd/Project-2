@@ -1,0 +1,97 @@
+.parallax-header {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-background {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  left: 0;
+  height: calc(100% + 200px);
+  background-image: url('/parallax-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  /* Fallback gradient in case image doesn't load */
+  background-color: #1a1a2e;
+}
+
+/* Overlay for better text readability */
+.parallax-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.parallax-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease-out;
+}
+
+.parallax-subtitle {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-header {
+    height: 300px;
+  }
+
+  .parallax-title {
+    font-size: 2.5rem;
+  }
+
+  .parallax-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
