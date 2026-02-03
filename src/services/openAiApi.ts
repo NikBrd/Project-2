@@ -44,7 +44,6 @@ Do NOT include any text before or after the JSON. Only return the JSON object.`;
 
     // Get API key - use VITE_CHATGPT_API_KEY
     const apiKey: string = import.meta.env.VITE_CHATGPT_API_KEY;
-    console.log('apiKey', apiKey);
 
     // Debug: log environment info
     console.log('Environment check:', {

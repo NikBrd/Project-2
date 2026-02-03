@@ -18,8 +18,6 @@ const AIRecommendations: React.FC = () => {
   }>({});
 
   const handleGetRecommendation = async (coinId: string) => {
-    console.log('env object:', import.meta.env);
-    console.log('BASE_URL:', import.meta.env.BASE_URL);
     setLoadingRecommendations((prev) => ({ ...prev, [coinId]: true }));
 
     try {
